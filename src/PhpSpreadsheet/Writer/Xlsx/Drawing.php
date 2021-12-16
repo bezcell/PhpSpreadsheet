@@ -179,10 +179,10 @@ class Drawing extends WriterPart
             // $objWriter->endElement();
 			if ($aResizeProportional) {
 				$objWriter->startElement('xdr:to');
-					$objWriter->writeElement('xdr:col', $aCoordinates[0] - 1);
-					$objWriter->writeElement('xdr:colOff', \PhpOffice\PhpSpreadsheet\Shared\Drawing::pixelsToEMU($drawing->getOffsetX()) + \PhpOffice\PhpSpreadsheet\Shared\Drawing::pixelsToEMU($drawing->getWidth()));
-					$objWriter->writeElement('xdr:row', $aCoordinates[1] - 1);
-					$objWriter->writeElement('xdr:rowOff', \PhpOffice\PhpSpreadsheet\Shared\Drawing::pixelsToEMU($drawing->getOffsetY()) + \PhpOffice\PhpSpreadsheet\Shared\Drawing::pixelsToEMU($drawing->getHeight()));
+					$objWriter->writeElement('xdr:col', $aCoordinates[0]);
+					$objWriter->writeElement('xdr:colOff', \PhpOffice\PhpSpreadsheet\Shared\Drawing::pixelsToEMU($drawing->getOffsetX()));
+					$objWriter->writeElement('xdr:row', $aCoordinates[1]);
+					$objWriter->writeElement('xdr:rowOff', \PhpOffice\PhpSpreadsheet\Shared\Drawing::pixelsToEMU($drawing->getOffsetY()));
 				$objWriter->endElement();
 			} else {
 				// xdr:ext
